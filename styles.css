@@ -1,3 +1,13 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1{
+	margin: 1rem;
+}
+
 .flex-center{
 	display: flex;
 	justify-content: center;
@@ -12,19 +22,24 @@ button{
 	font-size: 1.5em;
 	font-weight: bold;
 }
+
+
 .container{
 	display: grid;
 	justify-content: center;
 	align-items: center;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 0.5em;
-	width: 300px;
+	width: 90%;
+	max-width: 300px;
 	border: 3px solid;
 	border-radius: 10px;
-	background: black;
+	background: #ded9d9;
+	margin-top: 1rem;
+	padding: 5px;
 }
 
-#result{
+.result-btn{
    grid-column: 1/5;
    height: 75px;
 }
@@ -45,4 +60,18 @@ button{
 #ac{
 	background-color: #ff3300;
 	grid-column: 1/4;
+}
+
+.operator:hover,.number:hover, #ac:hover{
+	background: #60e450;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.fadeIn {
+  opacity : 1;
+  animation : fadeIn 1.2s linear;
 }
